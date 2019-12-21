@@ -1950,11 +1950,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\fredd\\Desktop\\VS\\BlazorAppInversoca\\BlazorAppInversoca\\Client\\BlazorAppInversoca.Client.csproj",
+      "projectUniqueName": "C:\\Users\\fredd\\Source\\Repos\\freddysotof\\BlazorAppInversoca\\BlazorAppInversoca\\Client\\BlazorAppInversoca.Client.csproj",
       "projectName": "BlazorAppInversoca.Client",
-      "projectPath": "C:\\Users\\fredd\\Desktop\\VS\\BlazorAppInversoca\\BlazorAppInversoca\\Client\\BlazorAppInversoca.Client.csproj",
+      "projectPath": "C:\\Users\\fredd\\Source\\Repos\\freddysotof\\BlazorAppInversoca\\BlazorAppInversoca\\Client\\BlazorAppInversoca.Client.csproj",
       "packagesPath": "C:\\Users\\fredd\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\fredd\\Desktop\\VS\\BlazorAppInversoca\\BlazorAppInversoca\\Client\\obj\\",
+      "outputPath": "C:\\Users\\fredd\\Source\\Repos\\freddysotof\\BlazorAppInversoca\\BlazorAppInversoca\\Client\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -1973,8 +1973,8 @@
       "frameworks": {
         "netstandard2.1": {
           "projectReferences": {
-            "C:\\Users\\fredd\\Desktop\\VS\\BlazorAppInversoca\\BlazorAppInversoca\\Shared\\BlazorAppInversoca.Shared.csproj": {
-              "projectPath": "C:\\Users\\fredd\\Desktop\\VS\\BlazorAppInversoca\\BlazorAppInversoca\\Shared\\BlazorAppInversoca.Shared.csproj"
+            "C:\\Users\\fredd\\Source\\Repos\\freddysotof\\BlazorAppInversoca\\BlazorAppInversoca\\Shared\\BlazorAppInversoca.Shared.csproj": {
+              "projectPath": "C:\\Users\\fredd\\Source\\Repos\\freddysotof\\BlazorAppInversoca\\BlazorAppInversoca\\Shared\\BlazorAppInversoca.Shared.csproj"
             }
           }
         }
