@@ -1,0 +1,26 @@
+﻿@inject ServicioModulo _servicioModulo
+<div class="row">
+    <div class="col-xs-12 col-md-3 offset-1">
+        <MatStringField @bind-Value="model.Nombre" Label="Nombre del Rol" Outlined="true"> </MatStringField>
+        <ValidationMessage For="@(() => model.Nombre)" />
+    </div>
+
+    <div class="col-xs-12 col-md-3 offset-1">
+        <MatStringField @bind-Value="model.Nombre" Label="Informacion Adicional" Outlined="true"> </MatStringField>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12 col-md-3 offset-1">
+        <MatStringField @bind-Value="model.Nombre" Label="Informacion Adicional" Outlined="true"> </MatStringField>
+    </div>
+</div>
+@code
+{
+    [Parameter]
+    public RolViewModel model { get; set; }
+ 
+    protected override async Task OnInitializedAsync()
+    {
+      
+    }
+}

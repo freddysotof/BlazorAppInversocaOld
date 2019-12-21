@@ -1,0 +1,41 @@
+﻿@inject ServicioModulo _servicioModulo
+
+    <div class="row">
+        <div class="col-xs-12 col-md-4 offset-1">
+
+            <MatStringField @bind-Value="model.Nombre" Label="Nombre de Usuario" Outlined="true"
+                            HelperTextValidation="true"> </MatStringField>
+            <ValidationMessage For="@(() => model.Nombre)" />
+        </div>
+
+        <div class="col-xs-12 col-md-4 offset-1">
+            <MatStringField @bind-Value="model.Correo" Type="email" Label="Correo electrónico" FullWidth="true"> </MatStringField>
+            <ValidationMessage For="@(() => model.Correo)" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-md-4 offset-1">
+            <MatStringField @bind-Value="model.Contrasena" Label="Contraseña" Type="password" Outlined="true"
+                            HelperTextPersistent="true" HelperText="Debe tener un minimo de 8 caracteres"> </MatStringField>
+            <ValidationMessage For="@(() => model.Contrasena)" />
+        </div>
+        <div class="col-xs-12 col-md-4 offset-1">
+            <MatStringField @bind-Value="model.ConfirmarContrasena" Label="Confirme Contraseña" Type="password" Outlined="true"
+                            HelperTextPersistent="true" HelperText="Debe coincidir con la contraseña digitada"> </MatStringField>
+            <ValidationMessage For="@(() => model.ConfirmarContrasena)" />
+        </div>
+    </div>
+
+    @code
+{
+        [Parameter]
+        public UsuarioViewModel model { get; set; }
+        [Parameter]
+        public EventCallback<string> Salvar { get; set; }
+        string error = "";
+        public string confirmPassword = "";
+        protected override async Task OnInitializedAsync()
+        {
+
+        }
+    }

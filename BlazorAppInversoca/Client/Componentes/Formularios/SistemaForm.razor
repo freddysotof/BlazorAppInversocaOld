@@ -1,0 +1,22 @@
+﻿<div class="row">
+    <div class="col-md-4 align-text-bottom d-flex" style="margin-top:25px;">
+        <MatBody1>Nombre del Propiedad</MatBody1>
+    </div>
+    <div class="col-md-8">
+        <MatStringField @bind-Value="model.Nombre" Type="text" FullWidth="true"> </MatStringField>
+        <ValidationMessage For="@(() => model.Nombre)" />
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4 align-items-center d-flex" style="margin-top:25px;">
+        <MatBody1>Descripcion</MatBody1>
+    </div>
+    <div class="col-md-8">
+        <MatStringField @bind-Value="model.Nombre" Type="text" FullWidth="true" TextArea="true" Box="true" PlaceHolder="Breve Descripcion del Propiedad"> </MatStringField>
+    </div>
+</div>
+@code
+{
+    [Parameter]
+    public PropiedadViewModel model { get; set; }
+}

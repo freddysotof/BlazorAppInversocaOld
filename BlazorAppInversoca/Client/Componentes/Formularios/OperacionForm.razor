@@ -1,0 +1,85 @@
+﻿@inject ServicioModulo _servicioModulo
+<div class="row">
+    <div class="col-xs-12 col-md-5 offset-1">
+        <MatStringField @bind-Value="model.Nombre" Label="Nombre de la Operacion" Outlined="true"> </MatStringField>
+        <ValidationMessage For="@(() => model.Nombre)" />
+    </div>
+    <div class="col-xs-12 col-md-5 offset-1">
+        @if (!isModuloReadOnly)
+        {
+            <MatSelect  Enhanced="true" Label="Elegir Modulo" Outlined="true" TValue="int" @bind-Value="model.IdModulo">
+                @foreach (var modulo in ModulosView)
+                {
+                    <MatOption TValue="int" Value="@modulo.IdModulo">@modulo.Nombre</MatOption>
+                }
+            </MatSelect>
+        }
+        else
+        {
+            <MatStringField @bind-Value="modulo.Nombre" Label="Modulo" Dense="true" ReadOnly="isModuloReadOnly"> </MatStringField>
+        }
+
+
+    </div>
+   
+</div>
+<div class="row">
+    <div class="col-xs-12 col-md-5 offset-1">
+        <MatStringField @bind-Value="model.Nombre" Label="Informacion Adicional" Outlined="true"> </MatStringField>
+    </div>
+    <div class="col-xs-12 col-md-5 offset-1">
+        <MatStringField @bind-Value="model.Nombre" Label="Informacion Adicional" Outlined="true"> </MatStringField>
+    </div>
+</div>
+<div class="row" style="margin-left:28px">
+    <div class="col-md-12 col-xs-12 text-center">
+        <Theme themeColor="Theme.ThemeColor.nuevo">
+            <Body>
+                <MatButton Disabled="@(btnSave.isEnabled ? false : true)"
+                           Class="btn-lg" Raised="true" Type="Submit" Icon="@btnSave.icon">@btnSave.name</MatButton>
+            </Body>
+        </Theme>
+
+        <Theme themeColor="Theme.ThemeColor.cancel">
+            <Body>
+                <MatButton Disabled="@(btnCancel.isEnabled ? false : true)"  OnClick="@(()=>CancelOp.InvokeAsync("cancelar"))" Class="btn-lg"
+                           Raised="true" Type="@btnCancel.attribute.Trim()" Icon="@btnCancel.icon">@btnCancel.name</MatButton>
+            </Body>
+        </Theme>
+       
+             <Theme themeColor="Theme.ThemeColor.danger">
+                <Body>
+                    <MatButton Disabled="@(isNew ? true : false)" OnClick="@(()=>DeleteOp.InvokeAsync("eliminar"))" Class="btn-lg" 
+                     Raised="true" Type="@btnDelete.attribute.Trim()" Icon="@btnDelete.icon" >@btnDelete.name</MatButton>
+                </Body>
+            </Theme>
+
+    </div>
+</div>
+@code
+{
+    [Parameter]
+    public OperacionViewModel model { get; set; }
+    [Parameter]
+    public bool isModuloReadOnly { get; set; } = false;
+    [Parameter]
+    public bool isNew { get; set; }
+    [Parameter]
+    public ModuloViewModel modulo { get; set; }
+    [Parameter]
+    public EventCallback CancelOp { get; set; }
+    [Parameter]
+    public EventCallback DeleteOp { get; set; }
+    ModuloView mod = new ModuloView();
+    List<ModuloView> ModulosView = new List<ModuloView>();
+
+    // Modelo de Botones
+    ButtonModelView btnSave = StaticComponents.btnSave();
+    ButtonModelView btnCancel = StaticComponents.btnCancel;
+    ButtonModelView btnDelete = StaticComponents.btnDelete();
+    protected override async Task OnInitializedAsync()
+    {
+
+        model = new OperacionViewModel();
+    }
+}

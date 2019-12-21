@@ -1,0 +1,8 @@
+C:\Users\fredd\Desktop\VS\BlazorAppInversoca\BlazorAppInversoca\Shared\bin\Debug\netstandard2.1\BlazorAppInversoca.Shared.deps.json
+C:\Users\fredd\Desktop\VS\BlazorAppInversoca\BlazorAppInversoca\Shared\bin\Debug\netstandard2.1\BlazorAppInversoca.Shared.dll
+C:\Users\fredd\Desktop\VS\BlazorAppInversoca\BlazorAppInversoca\Shared\bin\Debug\netstandard2.1\BlazorAppInversoca.Shared.pdb
+C:\Users\fredd\Desktop\VS\BlazorAppInversoca\BlazorAppInversoca\Shared\obj\Debug\netstandard2.1\BlazorAppInversoca.Shared.AssemblyInfoInputs.cache
+C:\Users\fredd\Desktop\VS\BlazorAppInversoca\BlazorAppInversoca\Shared\obj\Debug\netstandard2.1\BlazorAppInversoca.Shared.AssemblyInfo.cs
+C:\Users\fredd\Desktop\VS\BlazorAppInversoca\BlazorAppInversoca\Shared\obj\Debug\netstandard2.1\BlazorAppInversoca.Shared.dll
+C:\Users\fredd\Desktop\VS\BlazorAppInversoca\BlazorAppInversoca\Shared\obj\Debug\netstandard2.1\BlazorAppInversoca.Shared.pdb
+C:\Users\fredd\Desktop\VS\BlazorAppInversoca\BlazorAppInversoca\Shared\obj\Debug\netstandard2.1\BlazorAppInversoca.Shared.csprojAssemblyReference.cache

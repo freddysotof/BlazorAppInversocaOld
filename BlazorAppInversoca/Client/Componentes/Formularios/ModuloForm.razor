@@ -1,0 +1,61 @@
+﻿
+<div class="row">
+    <div class="col-xs-12 col-md-3 offset-1">
+        <MatStringField @bind-Value="model.Nombre" Label="Nombre del Modulo" Outlined="true"> </MatStringField>
+        <ValidationMessage For="@(() => model.Nombre)" />
+    </div>
+    <div class="col-xs-12 col-md-3 offset-1">
+        @*@if (!isPropiedadReadOnly)
+        {
+            <MatSelect Enhanced="true" Label="Elegir Propiedad" Outlined="true" TValue="int" @bind-Value="model.IdPropiedad">
+                <MatOption TValue="int" Value="0"></MatOption>
+            </MatSelect>
+            <ValidationMessage For="@(() => model.Propiedad)" />
+        }
+        else
+        {
+            <MatStringField @bind-Value="model.Propiedad.Nombre" Label="Propiedad" Outlined="true" ReadOnly="isPropiedadReadOnly"> </MatStringField>
+            <ValidationMessage For="@(() => model.Propiedad.Nombre)" />
+        }*@
+    </div>
+    <div class="col-xs-12 col-md-3 offset-1">
+        <MatStringField @bind-Value="model.Nombre" Label="Informacion Adicional" Outlined="true"> </MatStringField>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12 col-md-3 offset-1">
+        <MatStringField @bind-Value="model.Nombre" Label="Informacion Adicional" Outlined="true"> </MatStringField>
+    </div>
+    @if (isPropiedadReadOnly)
+    {
+        <div class="col-xs-12 col-md-3 offset-1">
+            <Theme themeColor="Theme.ThemeColor.nuevo">
+                <Body>
+                    <MatButton Disabled="@(btnNew.isEnabled ? false : true)"
+                                Class="btn-lg" Style="height:100%" Raised="true" Type="Submit" Icon="@btnNew.icon">@btnNew.name</MatButton>
+                </Body>
+            </Theme>
+            <Theme themeColor="Theme.ThemeColor.primary">
+                <Body>
+                    <MatButton Disabled="@(btnClean.isEnabled ? false : true)"
+                     OnClick="@(()=>cleanModel.InvokeAsync("limpiar modelo"))" Class="btn-lg" Style="height:100%" Raised="true" Type="@btnClean.attribute" Icon="@btnClean.icon">@btnClean.name</MatButton>
+                </Body>
+            </Theme>
+        </div>
+    }
+</div>
+@code
+{
+    [Parameter]
+    public ModuloViewModel model { get; set; }
+
+    [Parameter]
+    public bool isPropiedadReadOnly { get; set; } = false;
+    [Parameter]
+    public EventCallback cleanModel { get; set; }
+
+    // Modelo de Botoes
+    ButtonModelView btnNew = StaticComponents.btnNew();
+    ButtonModelView btnClean = StaticComponents.btnCustom("Limpiar", "button", true, "clear_all");
+
+}

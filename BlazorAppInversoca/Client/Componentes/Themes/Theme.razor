@@ -1,0 +1,65 @@
+﻿<MatThemeProvider Theme="@theme">
+    @Body
+</MatThemeProvider>
+@code {
+    [Parameter]
+    public RenderFragment Body { get; set; }
+    [Parameter]
+    public ThemeColor themeColor { get; set; }
+    MatTheme theme = new MatTheme();
+
+    protected override async Task OnInitializedAsync()
+    {
+        switch (themeColor)
+        {
+            case ThemeColor.success:
+                theme.Primary =  MatThemeColors.Green._700.Value;
+                theme.Secondary = MatThemeColors.BlueGrey._500.Value;
+                break;
+            case ThemeColor.danger:
+                theme.Primary =  MatThemeColors.Red._700.Value;
+                theme.Secondary = MatThemeColors.BlueGrey._500.Value;
+                break;
+            case ThemeColor.primary:
+                theme.Primary =  MatThemeColors.LightBlue._700.Value;
+                theme.Secondary = MatThemeColors.BlueGrey._500.Value;
+                break;
+            case ThemeColor.nuevo:
+                theme.Primary = "#006064";
+                theme.Secondary = MatThemeColors.BlueGrey._500.Value;
+                break;
+            case ThemeColor.warning:
+                theme.Primary =  MatThemeColors.Yellow._700.Value;
+                theme.Secondary = MatThemeColors.BlueGrey._500.Value;
+                theme.OnPrimary= "#000000";
+                break;
+            case ThemeColor.info:
+                theme.Primary =  MatThemeColors.Blue._900.Value;
+                theme.Secondary = MatThemeColors.BlueGrey._500.Value;
+                break;
+            case ThemeColor.secondary:
+                theme.Primary =  "#e91e63";
+                theme.Secondary = MatThemeColors.LightGreen._500.Value;
+                break;
+            case ThemeColor.navmenu:
+                theme.Primary =  "#26c6da";
+                theme.Secondary = MatThemeColors.Cyan._500.Value;
+                theme.Background = "#42a5f5";
+                break;
+            case ThemeColor.menu:
+                theme.Primary = "#212121";
+                theme.Background = "#212121";
+                break;
+            case ThemeColor.cancel:
+                theme.Primary = "#f57c00";
+                theme.Background = "#212121";
+                break;
+        }
+    }
+    public enum ThemeColor
+    {
+        success,danger,primary,nuevo,warning,info,secondary,navmenu,menu,cancel
+    }
+
+
+}

@@ -1,0 +1,35 @@
+﻿<MatDialog @bind-IsOpen="@isModal" Style="min-width:1000px">
+
+    <MatDialogTitle>
+        <MatIconButton Type="button" OnClick="@(() => cerrarModal.InvokeAsync("cerrando"))" Class="btn"
+                       Icon="close" Style="position: absolute; right: 0;"></MatIconButton>
+        <br />
+        @modalTitle
+    </MatDialogTitle>
+    <MatDialogContent>
+        @modalBody
+    </MatDialogContent>
+    <MatDialogActions>
+        @modalFooter
+    </MatDialogActions>
+
+</MatDialog>
+
+
+
+@code {
+    [Parameter]
+    public bool isModal { get; set; }
+    [Parameter]
+    public RenderFragment modalBody { get; set; }
+    [Parameter]
+    public RenderFragment modalFooter { get; set; }
+    [Parameter]
+    public RenderFragment modalTitle { get; set; }
+    [Parameter]
+    public EventCallback<string> cerrarModal { get; set; }
+    void close()
+    {
+        isModal = false;
+    }
+}

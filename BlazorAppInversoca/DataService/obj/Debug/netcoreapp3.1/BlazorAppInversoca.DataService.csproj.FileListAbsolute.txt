@@ -1,0 +1,11 @@
+C:\Users\fredd\Desktop\VS\BlazorAppInversoca\BlazorAppInversoca\DataService\bin\Debug\netcoreapp3.1\BlazorAppInversoca.DataService.deps.json
+C:\Users\fredd\Desktop\VS\BlazorAppInversoca\BlazorAppInversoca\DataService\bin\Debug\netcoreapp3.1\BlazorAppInversoca.DataService.dll
+C:\Users\fredd\Desktop\VS\BlazorAppInversoca\BlazorAppInversoca\DataService\bin\Debug\netcoreapp3.1\BlazorAppInversoca.DataService.pdb
+C:\Users\fredd\Desktop\VS\BlazorAppInversoca\BlazorAppInversoca\DataService\bin\Debug\netcoreapp3.1\BlazorAppInversoca.Shared.dll
+C:\Users\fredd\Desktop\VS\BlazorAppInversoca\BlazorAppInversoca\DataService\bin\Debug\netcoreapp3.1\BlazorAppInversoca.Shared.pdb
+C:\Users\fredd\Desktop\VS\BlazorAppInversoca\BlazorAppInversoca\DataService\obj\Debug\netcoreapp3.1\BlazorAppInversoca.DataService.csprojAssemblyReference.cache
+C:\Users\fredd\Desktop\VS\BlazorAppInversoca\BlazorAppInversoca\DataService\obj\Debug\netcoreapp3.1\BlazorAppInversoca.DataService.AssemblyInfoInputs.cache
+C:\Users\fredd\Desktop\VS\BlazorAppInversoca\BlazorAppInversoca\DataService\obj\Debug\netcoreapp3.1\BlazorAppInversoca.DataService.AssemblyInfo.cs
+C:\Users\fredd\Desktop\VS\BlazorAppInversoca\BlazorAppInversoca\DataService\obj\Debug\netcoreapp3.1\BlazorAppInversoca.DataService.csproj.CopyComplete
+C:\Users\fredd\Desktop\VS\BlazorAppInversoca\BlazorAppInversoca\DataService\obj\Debug\netcoreapp3.1\BlazorAppInversoca.DataService.dll
+C:\Users\fredd\Desktop\VS\BlazorAppInversoca\BlazorAppInversoca\DataService\obj\Debug\netcoreapp3.1\BlazorAppInversoca.DataService.pdb
